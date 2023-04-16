@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/game-guide/static/css/main.f2160e5e.css",
+    "main.js": "/game-guide/static/js/main.4e999d42.js",
+    "index.html": "/game-guide/index.html",
+    "main.f2160e5e.css.map": "/game-guide/static/css/main.f2160e5e.css.map",
+    "main.4e999d42.js.map": "/game-guide/static/js/main.4e999d42.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f2160e5e.css",
+    "static/js/main.4e999d42.js"
+  ]
+}
