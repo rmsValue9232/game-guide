@@ -1,14 +1,16 @@
 import "../styles/Search.css";
 
-function Search(onChange, onKeyDown) {
-
-  // onChange = 
+function Search({onChange, searchF}) {
+  // onChange =
+  console.log(searchF);
+  console.log(onChange);
 
   return (
     <div className="w-full text-center flex flex-col md:flex-row sm:flex-wrap gap-2 flex-shrink-0 justify-center sm:items-center px-4 py-2 sticky top-0 backdrop-blur-md bg-background/50 border-b-2 border-foreground shadow-md shadow-black z-50">
       <input
-        onChange={onChange}
-        onKeyDown={onKeyDown}
+        id="txField"
+        // onChange={onChange}
+        // onKeyDown={onKeyDown}
         type="text"
         placeholder="Type here to explore video games"
         className="w-full md:w-7/12 border-0 backdrop-blur bg-primary/70 focus:bg-primary/90 text-foreground p-2 text-center rounded-sm focus:outline-none focus:ring-2 focus:ring-tertiary shadow-sm shadow-black"
@@ -17,7 +19,10 @@ function Search(onChange, onKeyDown) {
         <button className="w-1/2 p-1 bg-blue-500/80 rounded-md hover:bg-blue-400/80 active:bg-blue-400 shadow-sm shadow-black filterBtn">
           Filter<p className="material-symbols-outlined ml-2">filter_list</p>
         </button>
-        <button className="w-1/2 p-1 bg-green-500/80 rounded-md hover:bg-green-400/80 active:bg-green-400 shadow-sm shadow-black">
+        <button
+          onClick={(e) => searchF(document.getElementById("txField").value)}
+          className="w-1/2 p-1 bg-green-500/80 rounded-md hover:bg-green-400/80 active:bg-green-400 shadow-sm shadow-black"
+        >
           Search<p className="material-symbols-outlined ml-2">search</p>
         </button>
       </div>
